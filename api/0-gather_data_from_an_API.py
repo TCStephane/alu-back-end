@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     user = requests.get(base_url + "/users/" + str(employee_id)).json()
     todos = requests.get(base_url + "/todos",
-                        params={"userId": employee_id}).json()
+                         params={"userId": employee_id}).json()
 
     employee_name = user.get("name")
     total_tasks = len(todos)
